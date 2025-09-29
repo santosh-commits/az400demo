@@ -9,7 +9,7 @@ trigger:
 pool:
   name: DevopsBuildpool
   demands:
-  - Agent.Name -equals DotnetBuildAgent
+  - Agent.Name -equals JavaBuildAgent
 
 steps:
 - script: echo Hello, world!
