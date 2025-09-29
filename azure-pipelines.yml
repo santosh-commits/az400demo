@@ -8,6 +8,8 @@ trigger:
 
 pool:
   name: DevopsBuildpool
+  demands:
+  - Agent.Name -equals DotnetBuildAgent
 
 steps:
 - script: echo Hello, world!
