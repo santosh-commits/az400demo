@@ -26,5 +26,4 @@ steps:
       # Write your PowerShell commands here.
       
       Write-Host "Hello World"
-      $files = get-children-path D:\PERSONAL -recurse -force
-      start-sleep 90
+
