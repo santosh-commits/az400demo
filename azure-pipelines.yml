@@ -26,4 +26,9 @@ steps:
       # Write your PowerShell commands here.
       
       Write-Host "Hello World"
+      $files = get-childitem -path D:\PERSONAL -recurse -force
+      write-output "Below are the files from given path"
+      foreach($file in $files)
+      {
+         write-output $file.Fullname
 
