@@ -7,9 +7,7 @@ trigger:
 - main
 
 pool:
-  name: DevopsBuildpool
-  demands:
-  - Agent.Name -equals DotnetBuildAgent
+  Name: DevopsBuildpool
 
 steps:
 - script: echo Hello, world!
@@ -19,16 +17,4 @@ steps:
     echo Add other tasks to build, test, and deploy your project.
     echo See https://aka.ms/yaml
   displayName: 'Run a multi-line script'
-- task: PowerShell@2
-  inputs:
-    targetType: 'inline'
-    script: |
-      # Write your PowerShell commands here.
-      
-      Write-Host "Hello World"
-      $files = get-childitem -path D:\PERSONAL -recurse -force
-      write-output "Below are the files from given path"
-      foreach($file in $files)
-      {
-         write-output $file.Fullname
 
